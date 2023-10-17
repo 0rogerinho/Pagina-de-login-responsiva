@@ -7,66 +7,62 @@
     <title>PAGINA DE LOGIN RESPONSIVA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&family=Roboto+Slab:wght@200;400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&family=Roboto+Slab:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
 <body>
     <div class="container">
 
-        <div class="form">
-            <form action="#">
+        <form action="#">
 
-                <div class="form-header">
-                    <img src="/assets/img/icon _User Circle.svg" alt="Icone User Circulo">
-                    <h1> Logar </h1>
+            <div class="form-header">
+                <img src="./assets/img/icon _User Circle.svg" alt="Icone User Circulo">
+                <h1> Logar </h1>
+            </div>
+
+            <div class="input-group">
+
+                <input class="input-box" type="email" name="E-mail" placeholder="E-mail" id="">
+
+
+                <input class="input-box" type="password" name="Senha" placeholder="Sua senha">
+
+                <div class="input-checkbox">
+
+                    <label> <input type="radio" name="lembre-se de mim" id=""> Lembre-se de mim</label>
+                    <a href="#"> Recuperar senha </a>
                 </div>
 
-                <div class="input-group">
-                    <div class="input-box">
-                        <input type="email" name="E-mail" placeholder="E-mail" id="">
-                    </div>
-                    <div class="input-box">
-                        <input type="password" name="Senha" placeholder="Sua senha">
-                    </div>
-                    <div class="input-checkbox">
-                        <label> <input type="radio" name="lembre-se de mim" id=""> lembre-se de mim </label>
-                        <a href="#"> Recuperar senha </a>
-                    </div>
-                </div>
+            </div>
 
-                <div class="btn-form">
-                    <button type="submit"> Continue </button>
-                </div>
+            <button class="button-continue" type="submit"> Continue </button>
 
-                <div class="logar-criar">
-                    <div>
-                        <h2> não tem uma conta? <a href="#"> criar </a> </h2>
-
-                        <p> ou </p>
-
-                        <button href="#" class="btn-logar">
-                            <img class="img-btn" src="/assets/img/icon _google.svg" alt="Icone da logo do Google" />
-                            Logar com Google
-                        </button>
+            <div class="logar-criar">
+                <p> não tem uma conta? <a href="#"> criar </a> </p>
 
 
-                        <button href="#" class="btn-logar">
-                            <img src="/assets/img/icon _Github.svg" alt="Icone da logo do Github" />
-                            Logar com Github
-                        </button>
-                    </div>
 
-                </div>
+                <p class="text-ou"> ou </p>
 
-            </form>
-        </div>
+                <button href="#" class="btn-logar">
+                    <img class="img-btn" src="./assets/img/icon _google.svg" alt="Icone da logo do Google" />
+                    Logar com Google
+                </button>
+
+                <button href="#" class="btn-logar">
+                    <img src="./assets/img/icon _Github.svg" alt="Icone da logo do Github" />
+                    Logar com Github
+                </button>
+
+            </div>
+
+        </form>
+
 
         <div class="img-lateral">
-            <img src="/assets/img/image 1.svg" alt="Imagem">
+            <img src="./assets/img/image 1.svg" alt="Imagem">
         </div>
 
     </div>

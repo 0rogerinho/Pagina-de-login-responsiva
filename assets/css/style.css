@@ -1,341 +1,144 @@
-/* font-family: 'Bebas Neue', sans-serif;
-font-family: 'Inter', sans-serif;
-font-family: 'Roboto Slab', serif; */
-
-:root {
-    --primary-color: rgba(187, 100, 255);
-    --secundary-color: rgba(215, 77, 0);
-    --color-white: #FFFF;
-}
-
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-a {
-    cursor: pointer;
+    font-family: sans-serif;
+    color: white;
     text-decoration: none;
 }
-
-button {
-    cursor: pointer;
-}
-
 body {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    background: cadetblue;
 }
 
-.container {
-    height: 90vh;
+.container{
+    margin: 20px;
     display: flex;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0px 0px 13px 4px rgba(0, 0, 0, 0.3),
-        0px 10px 15px -3px rgba(63, 63, 63, 0.1);
 }
 
-.img-lateral {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-lateral img {
-    width: 100%;
-}
-
-.form {
-    width: 50%;
+form{
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to top, rgba(215, 77, 0), rgba(187, 100, 255));
-    padding: 45px;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(155deg, #BB64FF 1.25%, #D74D00 98.37%);
 }
 
-.form-header {
+.form-header{
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.form-header h1 {
-    color: var(--color-white);
-    font-weight: 700;
-    font-size: 2.5rem;
-}
-
-.form-header img {
-    width: 20%;
-}
-
-.form-header::after {
-    content: '';
-    margin-top: 120px;
-    width: 330px;
-    height: 2px;
-    position: absolute;
-    display: block;
-    background-color: #D9D9D9;
-}
-
-.input-group {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.input-box {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.1rem;
-}
-
-.input-box input {
-    width: 100%;
-    height: 50px;
-    margin: 1px 0;
-    border-radius: 10px;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
     align-items: center;
-    padding: 20px 45px 20px 20px;
-    color: #858484;
+    font-size: 10px;
+    font-weight: bold;
+    gap: .9375rem;
+    padding-bottom:  10px;
+    border-bottom: 1px solid white ;
 }
 
-.input-checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-    margin: -10px 0 40px;
-}
-
-.input-checkbox a,
-label {
-    color: var(--color-white);
-    font-size: 12px;
-    margin-right: 3px;
-}
-
-.btn-form {
-    text-align: center;
-    margin: 20px;
-}
-
-.btn-form button {
-    color: var(--color-white);
-    background-color: #E7862A;
-    border: none;
-    border-radius: 10px;
-    width: 60%;
+.form-header img{
+    width: 40px ;
     height: 40px;
-    font-size: 15px;
-    font-weight: 700;
 }
 
-.btn-form button:hover {
-    background: linear-gradient(to top, rgba(215, 77, 0), rgba(187, 100, 255));
-}
-
-.logar-criar {
+.input-group{
     display: flex;
     flex-direction: column;
-    padding-top: 25px;
-    gap: 20px;
+    gap: 10px;
+    min-width: 200px
 }
 
-.logar-criar div {
+.input-group input{
+    color: black;
+    height: 25px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px ;
+    outline-color: #BB64FF;
+}
+
+.input-checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+}
+.input-checkbox label {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+.button-continue{
+    margin: auto;
+    width: 74px;
+    height: 25px;
+    background: #E7862A;
+    border-radius: 7px ;
+    font-weight: bolder;
+    border: none;
+}
+.logar-criar{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.logar-criar h2 {
-    color: var(--color-white);
-    font-size: 18px;
     text-align: center;
+    font-size: .625rem;
+    gap: 8px;
+   
+}
+.text-ou{
+    position: relative;
+    z-index: 10;
+}
+.text-ou::after{
+    z-index: 1;
+    position: absolute;
+    content: '';
+    background: white;
+    width: 60px;
+    height: 1px;
+    top: 9px;
+    left: 5px;
+}
+.text-ou::before{
+    z-index: 1;
+    position: absolute;
+    content: '';
+    background: white;
+    width: 60px;
+    height: 1px;
+    top: 9px;
+    right: 5px;
 }
 
-.logar-criar a {
+.logar-criar a{
+
     color: #0581E6;
 }
-
-.logar-criar p {
-    color: var(--color-white);
-    font-size: 10px;
-    text-align: center;
-    position: relative;
-}
-
-.logar-criar p::after,
-.logar-criar p::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 100px;
-    background-color: #D9D9D9;
-    bottom: 50%;
-    right: 30px;
-}
-
-.logar-criar p::after {
-    left: 30px;
-}
-
-.btn-logar {
-    display: inline-flex;
+.logar-criar button{
+    display: flex;
+    height: 25px;
+    justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    font-size: 16px;
     font-weight: 500;
-    border-radius: 10px;
+    padding: 5px 0px;
+    gap: 20px;
+    color: #4E4E4E;
+    border-radius: 5px ;
     border: none;
-    width: 100%;
-    height: 50px;
 }
 
-.btn-logar img {
-    margin-right: 90px;
-}
-
-
-
-@media screen and (max-width: 980px) {
-    .img-lateral {
-        display: none;
-    }
-
-    .container {
-        width: 60%;
-    }
-
-    .form {
-        width: 100%;
-    }
-
-    .logar-criar p::after,
-    .logar-criar p::before {
-        width: 150px;
-
-    }
-
-    .btn-logar img {
-        margin-right: 145px;
-    }
-
+.logar-criar button img{
+   width: 15px;
+   height: 15px;
 }
 
 
-@media screen and (max-width: 815px) {
-    .container {
-        width: 60%;
-    }
 
-    .form {
-        width: 100%;
-    }
-
-    .logar-criar p::after,
-    .logar-criar p::before {
-        width: 130px;
-
-    }
-
-    .btn-logar img {
-        margin-right: 145px;
-    }
-
-}
-
-
-@media screen and (max-width: 770px) {
-    .container {
-        height: 70%;
-        width: 80%;
-    }
-
-    .form {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .btn-logar img {
-        margin-right: 130px;
-    }
-
-    .logar-criar h2 {
-        font-size: 16px;
-    }
-
-}
-
-@media screen and (max-width: 656px) {
-    .container {
-        height: 80vh;
-    }
-
-    .btn-form {
-        margin: 0px;
-    }
-
-    .btn-logar {
-        padding: 5px 10px;
-        font-size: 14px;
-    }
-
-    .form-header::after {
-        margin-top: 100px;
-        width: 300px;
-        height: 1px;
-    }
-
-    .logar-criar p::after,
-    .logar-criar p::before {
-        width: 100px;
-
-    }
-
-}
-
-@media screen and (max-width: 504px) {
-    .container {
-        height: 70%;
-        width: 80%;
-    }
-
-    .btn-logar {
-        padding: 5px 10px;
-        font-size: 10px;
-    }
-
-    .btn-logar img {
-        margin-right: 60px;
-    }
-
-    .form-header::after {
-        margin-top: 90px;
-        width: 200px;
-    }
-
-    .logar-criar p::after,
-    .logar-criar p::before {
-        width: 40px;
-    }
-
-    .logar-criar h2 {
-        font-size: 13px;
-    }
-
+.img-lateral{
+    display: none;
 }
