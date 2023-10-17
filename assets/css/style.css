@@ -7,21 +7,24 @@
     text-decoration: none;
 }
 body {
-    width: 100vw;
+    max-width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: cadetblue;
 }
 
 .container{
-    margin: 20px;
-    display: flex;
-}
+    max-width: 350px;
+        width: 100%;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.50);
+    }
 
 form{
     display: flex;
+    min-width: 300px;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
@@ -30,11 +33,12 @@ form{
 }
 
 .form-header{
+    margin: auto;
+    width: 200px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 10px;
     font-weight: bold;
     gap: .9375rem;
     padding-bottom:  10px;
@@ -55,9 +59,9 @@ form{
 
 .input-group input{
     color: black;
-    height: 25px;
+    height: 35px;
     padding: 10px;
-    border: none;
+    border: 1px solid #858484;
     border-radius: 5px ;
     outline-color: #BB64FF;
 }
@@ -66,17 +70,18 @@ form{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 11px;
+    font-size: .875rem;
 }
 .input-checkbox label {
     display: flex;
-    gap: 2px;
+    gap: 4px;
     align-items: center;
 }
 .button-continue{
+    cursor: pointer;
     margin: auto;
-    width: 74px;
-    height: 25px;
+    width: 100px;
+    padding: 10px 0px;
     background: #E7862A;
     border-radius: 7px ;
     font-weight: bolder;
@@ -86,9 +91,9 @@ form{
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: .625rem;
+    font-size: 14px;
+    font-weight: 600;
     gap: 8px;
-   
 }
 .text-ou{
     position: relative;
@@ -102,7 +107,7 @@ form{
     width: 60px;
     height: 1px;
     top: 9px;
-    left: 5px;
+    left: 40px;
 }
 .text-ou::before{
     z-index: 1;
@@ -112,7 +117,7 @@ form{
     width: 60px;
     height: 1px;
     top: 9px;
-    right: 5px;
+    right: 40px;
 }
 
 .logar-criar a{
@@ -121,7 +126,7 @@ form{
 }
 .logar-criar button{
     display: flex;
-    height: 25px;
+    height: 35px;
     justify-content: center;
     align-items: center;
     font-weight: 500;
@@ -129,16 +134,58 @@ form{
     gap: 20px;
     color: #4E4E4E;
     border-radius: 5px ;
-    border: none;
+    border: 1px solid;
 }
 
 .logar-criar button img{
-   width: 15px;
-   height: 15px;
+   width: 25px;
+   height: 25px;
 }
-
-
 
 .img-lateral{
     display: none;
+}
+
+/* responsividade para tablet */
+@media screen and ( min-width: 480px ) {
+    .container{
+    max-width: 470px ;
+    }
+    form{
+        padding: 53px 30px;
+    }
+    .form-header{
+
+    }
+    .input-group{
+        gap: 16px;
+    }
+    .input-group input{
+        height: 45px;
+    }
+    .input-checkbox input{
+        height: 20px;
+    }
+    .logar-criar button{
+    height: 45px;
+    }
+}
+
+/* responsividade para desktop */
+@media screen and ( min-width: 1024px ) {
+    .container{
+        display: flex;
+        align-items: center;
+        max-width: 720px;  
+    }
+    form {
+        min-width: 350px;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .img-lateral{
+        display: flex;
+        width: 350px;
+ 
+    }
 }
